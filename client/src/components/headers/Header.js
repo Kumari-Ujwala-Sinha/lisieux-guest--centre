@@ -24,6 +24,7 @@ function Header() {
     const adminRouter = () =>{
         return(
             <>
+                 <li><Link to="/product">Product</Link></li>
                 <li><Link to="/create_product">Create Product</Link></li>
                 <li><Link to="/category">Categories</Link></li>
             </>
@@ -57,7 +58,7 @@ function Header() {
             </div>
 
             <ul style={styleMenu}>
-                <li><Link to="/">{isAdmin ? 'Products' : 'Shop'}</Link></li>
+                
 
                 {isAdmin && adminRouter()}
 

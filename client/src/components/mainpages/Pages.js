@@ -4,14 +4,12 @@ import Products from './products/Products'
 import DetailProduct from './detailProduct/DetailProduct'
 import Login from './auth/Login'
 import Register from './auth/Register'
-
-
-
 import NotFound from './utils/not_found/NotFound'
 import Categories from './categories/Categories'
 import CreateProduct from './createProduct/CreateProduct'
 
 import {GlobalState} from '../../GlobalState'
+import Justhome from './Justhome'
 
 
 function Pages() {
@@ -22,7 +20,7 @@ function Pages() {
 
     return (
         <Switch>
-            <Route path="/" exact component={Products} />
+            <Route path="/" exact component={Justhome} />
             <Route path="/product" exact component={isAdmin ? Products  : NotFound} />
             <Route path="/detail/:id" exact component={DetailProduct} />
 
