@@ -20,12 +20,13 @@ function BtnRender({product, deleteProduct}) {
                     <Link id="btn_view" to={`/edit_product/${product._id}`}>
                         Edit
                     </Link>
-                </>
-                : <>
-                    
                     <Link id="btn_view" to={`/detail/${product._id}`}>
                         View
                     </Link>
+                </>
+                : <>
+                    
+                    
                 </>
             }
                 
