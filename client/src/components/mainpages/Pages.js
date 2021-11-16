@@ -10,6 +10,7 @@ import CreateProduct from './createProduct/CreateProduct'
 
 import {GlobalState} from '../../GlobalState'
 import Justhome from './Justhome'
+import CreateHomeslide from './createHomeslide/createHomeslide'
 
 
 function Pages() {
@@ -30,6 +31,8 @@ function Pages() {
             <Route path="/category" exact component={isAdmin ? Categories : NotFound} />
             <Route path="/create_product" exact component={isAdmin ? CreateProduct : NotFound} />
             <Route path="/edit_product/:id" exact component={isAdmin ? CreateProduct : NotFound} />
+            <Route path="/admin/create_homeslide" exact component={isAdmin ? CreateHomeslide : NotFound} />
+            <Route path="/admin/edit_homeslide/:id" exact component={isAdmin ? CreateHomeslide : NotFound} />
 
             
 
