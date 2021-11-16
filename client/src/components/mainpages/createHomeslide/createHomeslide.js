@@ -146,7 +146,13 @@ function CreateHomeslide() {
                 </div>
 
                 <div className="row">
-                    <label htmlFor="price">Price</label>
+                    <label htmlFor="content">Button text</label>
+                    <input type="text" name="button" id="content" required
+                    value={homeslide.button} rows="7" onChange={handleChangeInput} />
+                </div>
+
+                <div className="row">
+                    <label htmlFor="price">Link</label>
                     <input type="text" name="link" id="price" required
                     value={homeslide.link} onChange={handleChangeInput} />
                 </div>
@@ -157,11 +163,7 @@ function CreateHomeslide() {
                     value={homeslide.description} rows="5" onChange={handleChangeInput} />
                 </div>
 
-                <div className="row">
-                    <label htmlFor="content">Content</label>
-                    <textarea type="text" name="button" id="content" required
-                    value={homeslide.button} rows="7" onChange={handleChangeInput} />
-                </div>
+                
 
                 
 
