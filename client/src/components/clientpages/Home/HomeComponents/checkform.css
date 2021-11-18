@@ -1,0 +1,42 @@
+.checkform__row{
+    display: flex;
+    margin: 0 auto;
+    width: 50%;
+    
+}
+.checkform__col{
+    display: flex;
+    padding: 40px 20px;
+    flex-direction: column;
+   
+    justify-content: left;
+}
+.select__property{
+    height: 100%;
+    padding-right:40px;
+    padding-left: 5px;
+    border: 1px solid lightgrey;
+}
+.input__form{
+    padding:25px 35px; 
+    display: flex;
+    align-items: center;
+}x
+.checkform__heading{
+    padding-bottom: 10px;
+}
+.checkform__btn{
+    color:#fff;
+    background-color: red;
+    border-radius: 6px;
+    font-weight: 500;
+    cursor: pointer;
+    max-width: 200px;
+    width: 150px;
+}
+.checkform__btn__{
+    padding: 5  0px 20px;
+    display: flex;
+    align-items: center;
+   
+}

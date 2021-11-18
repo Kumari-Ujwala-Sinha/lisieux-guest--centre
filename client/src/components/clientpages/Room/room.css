@@ -1,0 +1,66 @@
+.promos{
+    background-color: #fff;
+
+    width: 100%;
+}
+.promos__wrapper{
+    width: 100%;
+    padding: 50px 0;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+.promos h1{
+    padding: 15px 0;
+    padding-bottom: 25px;
+    font-size: 28px;
+}
+.promos__input{
+    border: 1px solid grey;
+    border-radius: 20px;
+    padding: 9px;
+    padding-left: 20px;
+    position: relative;
+    font-size: 20px;
+    display: flex;
+    width: 50%;
+    margin: 0 auto;
+}
+.promos__input input::placeholder{
+    color:grey;
+   
+    cursor: pointer;
+}
+.promos__input input{
+    outline: none;
+    border: none;
+    width: 80%;
+}
+.promos__wrapper button{
+    background-color: red;
+    color:#fff;
+    position: absolute;
+    width: 20%;
+    right:1px;
+    top:2px;
+    letter-spacing: 1px;
+    border-radius: 20px;
+    padding: 8px 25px;
+}
+.categories input, button{
+    height: 53px;
+}
+@media (max-width:707px){
+    .promos__wrapper button {
+     padding:7px 12px;
+     font-size: 15px;
+    }
+    .promos__input{
+        font-size: 15px;
+        width:80%;
+    }
+    .promos__wrapper button{
+        width: 35%;
+    }
+}

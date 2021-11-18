@@ -34,11 +34,6 @@ function Pages() {
             <Route path="/admin/create_homeslide" exact component={isAdmin ? CreateHomeslide : NotFound} />
             <Route path="/admin/edit_homeslide/:id" exact component={isAdmin ? CreateHomeslide : NotFound} />
 
-            
-
-            
-
-
             <Route path="*" exact component={NotFound} />
         </Switch>
     )

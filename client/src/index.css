@@ -8,12 +8,14 @@
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
-
+.carousel.carousel-slider .control-arrow {
+ 
+  height: 100vh;}
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
-.App{
+/* .App{
   max-width: 1230px;
   min-height: 100vh;
   margin: 0 auto;
@@ -57,10 +59,7 @@ button{
 
 /* ----------------- Responsive ------------------ */
 @media (max-width: 820px){
-  header .logo{
-    min-width: 115px;
-    flex: none;
-  }
+  
   header ul{
    padding: 10px 0;
   }
@@ -102,9 +101,7 @@ button{
 }
 
 @media (max-width: 500px){
-  .App{
-    padding: 0 10px;
-  }
+  
   .detail{
     font-size: 100%;
     padding: 0;
@@ -128,5 +125,4 @@ button{
   }
   .create_product .upload{
     margin: 20px 0;
-  }
-}
+  }}

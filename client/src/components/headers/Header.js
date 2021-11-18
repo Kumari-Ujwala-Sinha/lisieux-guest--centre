@@ -2,7 +2,7 @@ import React, {useContext, useState} from 'react'
 import {GlobalState} from '../../GlobalState'
 import Menu from './icon/menu.svg'
 import Close from './icon/close.svg'
-
+import { NavLink } from 'react-router-dom'
 import {Link} from 'react-router-dom'
 import axios from 'axios'
 
@@ -52,11 +52,11 @@ function Header() {
                 <img src={Menu} alt="" width="30" />
             </div>
 
-            <div className="logo">
+            {/* <div className="logo">
                 <h1>
                     <Link to="/">{isAdmin ? 'lisieux Admin' : 'lisieux guest centre'}</Link>
                 </h1>
-            </div>
+            </div> */}
 
             <ul style={styleMenu}>
                 
@@ -64,10 +64,18 @@ function Header() {
                 {isAdmin && adminRouter()}
 
                 {
-                    isLogged ? loggedRouter() : <li><Link to="/login">Login ✥ Register</Link></li>
+                    isLogged ? loggedRouter() : <li><NavLink
+                        exact
+                        to="/login"
+                        activeClassName=""
+                        activeStyle={{
+                        fontWeight: "bold",
+                        color: "#ffa726",
+                        }}
+                    >Login ✥ Register</NavLink></li>
                 }
 
-                <li onClick={() => setMenu(!menu)}>
+                <li className="nav__item" onClick={() => setMenu(!menu)}>
                     <img src={Close} alt="" width="30" className="menu" />
                 </li>
 
