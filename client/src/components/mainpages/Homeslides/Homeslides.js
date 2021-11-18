@@ -1,8 +1,9 @@
 import React, {useContext, useState} from 'react'
 import {GlobalState} from '../../../GlobalState'
-import ProductItem from '../utils/productItem/ProductItem'
+
 import Loading from '../utils/loading/Loading'
 import axios from 'axios'
+import HomeslideItem from './HomeslideItem'
 
 
 
@@ -11,29 +12,29 @@ function Homeslides() {
     const [homeslides, setHomeslides] = state.homeslidesAPI.homeslides
     const [isAdmin] = state.userAPI.isAdmin
     const [token] = state.token
-    const [callback, setCallback] = state.productsAPI.callback
+    const [callback, setCallback] = state.homeslidesAPI.callback
     const [loading, setLoading] = useState(false)
     const [isCheck, setIsCheck] = useState(false)
 
     const handleCheck = (id) =>{
-        products.forEach(product => {
-            if(product._id === id) product.checked = !product.checked
+        homeslides.forEach(homeslide => {
+            if(homeslide._id === id) homeslide.checked = !homeslide.checked
         })
-        setProducts([...products])
+        setHomeslides([...homeslides])
     }
 
-    const deleteProduct = async(id, public_id) => {
+    const deleteHomeslide = async(id, public_id) => {
         try {
             setLoading(true)
             const destroyImg = axios.post('/api/destroy', {public_id},{
                 headers: {Authorization: token}
             })
-            const deleteProduct = axios.delete(`/api/products/${id}`, {
+            const deleteHomeslide = axios.delete(`/api/homeslides/${id}`, {
                 headers: {Authorization: token}
             })
 
             await destroyImg
-            await deleteProduct
+            await deleteHomeslide
             setCallback(!callback)
             setLoading(false)
         } catch (err) {
@@ -42,16 +43,16 @@ function Homeslides() {
     }
 
     const checkAll = () =>{
-        products.forEach(product => {
-            product.checked = !isCheck
+        homeslides.forEach(homeslide => {
+            homeslide.checked = !isCheck
         })
-        setProducts([...products])
+        setHomeslides([...homeslides])
         setIsCheck(!isCheck)
     }
 
     const deleteAll = () =>{
-        products.forEach(product => {
-            if(product.checked) deleteProduct(product._id, product.images.public_id)
+        homeslides.forEach(homeslide => {
+            if(homeslide.checked) deleteHomeslide(homeslide._id, homeslide.images.public_id)
         })
     }
 
@@ -71,15 +72,15 @@ function Homeslides() {
 
         <div className="products">
             {
-                products.map(product => {
-                    return <ProductItem key={product._id} product={product}
-                    isAdmin={isAdmin} deleteProduct={deleteProduct} handleCheck={handleCheck} />
+                homeslides.map(homeslide => {
+                    return <HomeslideItem key={homeslide._id} homeslide={homeslide}
+                    isAdmin={isAdmin} deleteHomeslide={deleteHomeslide} handleCheck={handleCheck} />
                 })
             } 
         </div>
 
         
-        {products.length === 0 && <Loading />}
+        {homeslides.length === 0 && <Loading />}
         </>
     )
 }
