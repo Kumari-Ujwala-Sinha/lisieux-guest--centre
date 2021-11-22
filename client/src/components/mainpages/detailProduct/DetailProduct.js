@@ -28,14 +28,14 @@ function DetailProduct() {
             { detailProduct.images.map((image)=>{return <img key={image.public_id} src={image.url} alt="" />})}
                 {/*<img src={detailProduct.images.url} alt="" />*/}
                 <div className="box-detail">
-                    <div className="row">
+                   {/* <div className="row">
                         <h2>{detailProduct.title}</h2>
                         <h6>#idu: {detailProduct.product_id}</h6>
                     </div>
                     <span>$ {detailProduct.price}</span>
                     <p>{detailProduct.description}</p>
                     <p>{detailProduct.content}</p>
-                    <p>Sold: {detailProduct.sold}</p>
+                    <p>Sold: {detailProduct.sold}</p>*/}
                     
                 </div>
             </div>

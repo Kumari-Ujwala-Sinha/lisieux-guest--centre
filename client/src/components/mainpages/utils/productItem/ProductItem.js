@@ -10,7 +10,7 @@ function ProductItem({product, isAdmin, deleteProduct, handleCheck}) {
                 isAdmin && <input type="checkbox" checked={product.checked}
                 onChange={() => handleCheck(product._id)} />
             }
-            { product.images.map((image)=>{return <img key={image.public_id} src={image.url} alt="" />})}
+           {/* { product.images.map((image)=>{return <img key={image.public_id} src={image.url} alt="" />})}
              
              {/*<img src={product.images[0].url} alt="" />*/}
 
