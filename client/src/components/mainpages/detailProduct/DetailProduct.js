@@ -25,7 +25,8 @@ function DetailProduct() {
     return (
         <>
             <div className="detail">
-                <img src={detailProduct.images.url} alt="" />
+            { detailProduct.images.map((image)=>{return <img key={image.public_id} src={image.url} alt="" />})}
+                {/*<img src={detailProduct.images.url} alt="" />*/}
                 <div className="box-detail">
                     <div className="row">
                         <h2>{detailProduct.title}</h2>

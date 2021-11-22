@@ -5,6 +5,11 @@
     align-items: center;
     justify-content: space-around;
 }
+.file-upload{
+    justify-content: center;
+    border: 5px solid black;
+    padding:20px 0;
+}
 .upload{
     max-width: 450px;
     height: 500px;

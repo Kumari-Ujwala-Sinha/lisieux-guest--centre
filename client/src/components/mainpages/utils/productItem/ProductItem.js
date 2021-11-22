@@ -5,11 +5,14 @@ function ProductItem({product, isAdmin, deleteProduct, handleCheck}) {
 
     return (
         <div className="product_card">
+            <BtnRender product={product} deleteProduct={deleteProduct} />
             {
                 isAdmin && <input type="checkbox" checked={product.checked}
                 onChange={() => handleCheck(product._id)} />
             }
-            <img src={product.images.url} alt="" />
+            { product.images.map((image)=>{return <img key={image.public_id} src={image.url} alt="" />})}
+             
+             {/*<img src={product.images[0].url} alt="" />*/}
 
             <div className="product_box">
                 <h2 title={product.title}>{product.title}</h2>
@@ -18,7 +21,7 @@ function ProductItem({product, isAdmin, deleteProduct, handleCheck}) {
             </div>
 
             
-            <BtnRender product={product} deleteProduct={deleteProduct} />
+            
         </div>
     )
 }
