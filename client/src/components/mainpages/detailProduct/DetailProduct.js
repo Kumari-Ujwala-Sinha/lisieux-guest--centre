@@ -31,7 +31,7 @@ function DetailProduct() {
                    {/* <div className="row">
                         <h2>{detailProduct.title}</h2>
                         <h6>#idu: {detailProduct.product_id}</h6>
-                    </div>
+                       </div>
                     <span>$ {detailProduct.price}</span>
                     <p>{detailProduct.description}</p>
                     <p>{detailProduct.content}</p>
